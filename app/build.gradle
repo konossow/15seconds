@@ -22,7 +22,7 @@ android {
     }
 }
 
-buildacript{
+buildscript{
     repositories{
         mavenCentral()
     }

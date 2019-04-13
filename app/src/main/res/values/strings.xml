@@ -3,7 +3,7 @@
     <string name="welcome_messege_0">Hello!</string>
     <string name="exercisesButtonName">Exercises</string>
     <string name="calendarButtonName">Calendar</string>
-    <string name="showoffButtonName">Show off</string>
+    <string name="showoffButtonName">Share</string>
     <string name="settingsButtonName">Settings</string>
     <string name="settings">Settings</string>
     <string name="day_availability">Action hours:</string>

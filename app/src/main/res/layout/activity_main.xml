@@ -30,12 +30,12 @@
             app:layout_constraintStart_toStartOf="@+id/showoffButton"/>
     <TextView
             android:text="@string/welcome_messege_0"
-            android:layout_width="424dp"
-            android:layout_height="43dp"
+            android:layout_width="match_parent"
             android:id="@+id/textView" android:textSize="30sp"
             android:textStyle="bold" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="40dp"
             app:layout_constraintStart_toStartOf="parent" android:textAlignment="center"
-    />
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="50dp"/>
     <Button
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -57,7 +57,7 @@
             android:id="@+id/excersisesButton"
             android:text="@string/excersisesButtonName"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="40dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginTop="100dp"/>
     <Button
             android:text="@string/calendaryButtonName"
             android:layout_width="150dp"

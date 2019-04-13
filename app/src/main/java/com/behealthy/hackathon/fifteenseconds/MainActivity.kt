@@ -15,12 +15,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //TextView tv = findViewById<TextView>(R.id.textView)
         textView.text = getString(R.string.welcome_messege_0)
-        exercisesButtonName.text = getString(R.string.exercisesButtonName)
-        calendarButtonName.text = getString(R.string.calendarButtonName)
-        showoffButtonName.text = getString(R.string.showoffButtonName)
-        settingsButtonName.text = getString(R.string.settingsButtonName)
-
-
     }
 
     fun goToExercises(view: View){

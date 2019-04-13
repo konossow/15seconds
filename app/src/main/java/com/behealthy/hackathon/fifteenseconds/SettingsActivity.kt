@@ -25,4 +25,8 @@ class SettingsActivity : Activity() {
         SettingsSingleton.setExerciseDuration(exerciseSpinnerFactory.getExercise())
         finish()
     }
+    fun goBack(view: View)
+    {
+        finish()
+    }
 }

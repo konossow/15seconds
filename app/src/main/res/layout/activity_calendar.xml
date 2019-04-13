@@ -6,12 +6,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".CalendarActivity">
+    <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/calendarToolbar" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:logo="@drawable/ic_action_name" app:title="Calendar"
+            app:titleMarginStart="30dp" android:onClick="goBack"/>
+    <ImageView
+            android:src="@drawable/calendar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/calendarToolbarImage"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+    />
     <com.squareup.timessquare.CalendarPickerView
             android:id="@+id/calendar_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="603dp"
             android:scrollbarStyle="outsideOverlay"
             android:clipToPadding="false"
             android:background="#FFFFFF"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentTop="true"
+            app:layout_constraintTop_toBottomOf="@+id/calendarToolbar"/>
 </android.support.constraint.ConstraintLayout>

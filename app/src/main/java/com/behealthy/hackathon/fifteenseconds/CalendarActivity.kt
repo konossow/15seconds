@@ -2,6 +2,7 @@ package com.behealthy.hackathon.fifteenseconds
 
 import android.app.Activity
 import android.os.Bundle
+import android.view.View
 import com.squareup.timessquare.CalendarPickerView
 import java.util.*
 
@@ -16,5 +17,9 @@ class CalendarActivity : Activity() {
         SettingsSingleton.getSuccededDates().forEach {
             calendar_view.selectDate(it)
         }
+    }
+    fun goBack(view: View)
+    {
+        finish()
     }
 }

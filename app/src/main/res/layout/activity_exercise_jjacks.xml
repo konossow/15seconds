@@ -7,6 +7,15 @@
         android:layout_height="match_parent"
         tools:context=".ExerciseJJacksActivity">
 
+    <pl.droidsonroids.gif.GifImageView
+            android:layout_width="192sp"
+            android:layout_height="192sp"
+            android:src="@drawable/jjacks_gif2"
+            android:layout_marginTop="80dp"
+            app:layout_constraintTop_toTopOf="@+id/settingsToolbar" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.497" android:id="@+id/gifImageView"/>
+
     <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -17,5 +26,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:logo="@drawable/ic_action_name" app:title="Jumping Jacks"
             app:titleMarginStart="30dp" android:onClick="goBack"/>
+    <TextView
+            android:layout_width="302dp"
+            android:layout_height="91dp"
+            android:id="@+id/textView2" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/gifImageView"
+            android:text="@string/exercisePushupDescription" android:textSize="18sp"/>
 
 </android.support.constraint.ConstraintLayout>

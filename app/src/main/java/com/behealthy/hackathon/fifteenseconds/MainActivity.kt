@@ -1,8 +1,10 @@
 package com.behealthy.hackathon.fifteenseconds
 
+import android.content.Intent
 import kotlinx.android.synthetic.main.activity_main.*
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -11,5 +13,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //TextView tv = findViewById<TextView>(R.id.textView)
+    }
+
+    fun goToSettings(view: View){
+        val settingsIntent = Intent(this, SettingsActivity::class.java)
+        startActivity(settingsIntent)
     }
 }

@@ -7,4 +7,21 @@
         android:layout_height="match_parent"
         tools:context=".ShowoffActivity">
 
+    <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/showoffToolbar" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:logo="@drawable/ic_action_name"
+            app:titleMarginStart="30dp" android:onClick="goBack" app:title="Show off"/>
+    <ImageView
+            android:src="@drawable/face"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+    />
 </android.support.constraint.ConstraintLayout>

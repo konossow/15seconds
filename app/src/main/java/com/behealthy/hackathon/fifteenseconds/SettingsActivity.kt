@@ -12,17 +12,30 @@ class SettingsActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
-        fromEditText.setText(SettingsSingleton.dayAvailableFrom.toString())
-        toEditText.setText(SettingsSingleton.dayAvailableTo.toString())
+        fromEditText.setText(SettingsSingleton.getAvailableFrom())
+        toEditText.setText(SettingsSingleton.getAvailableTo())
         exerciseSpinner!!.onItemSelectedListener = exerciseSpinnerFactory.getListener()
         exerciseSpinner!!.adapter = exerciseSpinnerFactory.getOptionsArrayAdapter()
         exerciseSpinner!!.setSelection(exerciseSpinnerFactory.getSelectionIndex())
     }
 
     fun saveButtonClick(view: View){
-        SettingsSingleton.dayAvailableFrom = fromEditText.text.toString().toInt()
-        SettingsSingleton.dayAvailableTo = toEditText.text.toString().toInt()
+        if(fromEditText.text!=null){
+            SettingsSingleton.setAvailableFrom(fromEditText.text.toString())
+        }else{
+            SettingsSingleton.setAvailableFrom(null)
+        }
+        if(toEditText.text!=null){
+            SettingsSingleton.setAvailableTo(toEditText.text.toString())
+        }else{
+            SettingsSingleton.setAvailableTo(null)
+        }
+
         SettingsSingleton.setExerciseDuration(exerciseSpinnerFactory.getExercise())
+        finish()
+    }
+    fun goBack(view: View)
+    {
         finish()
     }
 }

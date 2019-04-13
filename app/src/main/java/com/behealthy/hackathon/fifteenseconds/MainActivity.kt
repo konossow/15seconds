@@ -5,15 +5,16 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_main.view.*
+
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //TextView tv = findViewById<TextView>(R.id.textView)
+            getSupportActionBar()?.setDisplayShowHomeEnabled(true)
+            getSupportActionBar()?.setLogo(R.mipmap.ic_launcher)
+            getSupportActionBar()?.setDisplayUseLogoEnabled(true)
         textView.text = getString(R.string.welcome_messege_0)
     }
 

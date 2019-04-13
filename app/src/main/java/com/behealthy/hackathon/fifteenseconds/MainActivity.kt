@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //TextView tv = findViewById<TextView>(R.id.textView)
+        textView.text = "Hello in 15 seconds!" 
     }
 
     fun goToSettings(view: View){

@@ -6,5 +6,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".CalendarActivity">
-
+    <com.squareup.timessquare.CalendarPickerView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="outsideOverlay"
+            android:clipToPadding="false"
+            android:background="#FFFFFF"
+            android:layout_alignParentTop="true"/>
 </android.support.constraint.ConstraintLayout>

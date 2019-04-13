@@ -73,4 +73,10 @@
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@+id/excersisesButton"
             app:layout_constraintStart_toStartOf="@+id/excersisesButton" android:text="@string/exercisesButtonName"/>
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="161dp" android:id="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:onClick="showDatePicker"/>
 </android.support.constraint.ConstraintLayout>

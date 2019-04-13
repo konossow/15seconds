@@ -6,9 +6,10 @@
     <string name="showoffButtonName">Show off</string>
     <string name="settingsButtonName">Settings</string>
     <string name="settings">Settings</string>
-    <string name="day_availability">Day availability:</string>
+    <string name="day_availability">Action hours:</string>
     <string name="from">From</string>
     <string name="to">To</string>
     <string name="exercise_time">Exercise Time:</string>
     <string name="save">Save</string>
+    <string name="hyphenSettings">-</string>
 </resources>

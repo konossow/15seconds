@@ -9,6 +9,20 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ExerciseSupermanActivity">
+        </activity>
+        <activity android:name=".ExerciseSquatsActivity">
+        </activity>
+        <activity android:name=".ExerciseSitupActivity">
+        </activity>
+        <activity android:name=".ExercisePushupActivity">
+        </activity>
+        <activity android:name=".ExercisePlankActivity">
+        </activity>
+        <activity android:name=".ExerciseJRopeActivity">
+        </activity>
+        <activity android:name=".ExerciseJJacksActivity">
+        </activity>
         <activity android:name=".ShowoffActivity">
         </activity>
         <activity android:name=".CalendarActivity">

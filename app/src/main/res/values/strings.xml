@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">15seconds</string>
+    <string name="welcome_messege_0">Hello!</string>
+    <string name="excersisesButtonName">Excersises</string>
+    <string name="calendaryButtonName">Calendary</string>
+    <string name="showoffButtonName">Show off</string>
+    <string name="settingsButtonName">Settings</string>
+
+
 </resources>

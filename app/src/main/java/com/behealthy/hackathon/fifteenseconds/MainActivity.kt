@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +14,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //TextView tv = findViewById<TextView>(R.id.textView)
-        textView.text = "Hello in 15 seconds"
+        textView.text = getString(R.string.welcome_messege_0)
+        excersisesButtonName.text = getString(R.string.excersisesButtonName)
+        calendaryButtonName.text = getString(R.string.calendaryButtonName)
+        showoffButtonName.text = getString(R.string.showoffButtonName)
+        settingsButtonName.text = getString(R.string.settingsButtonName)
+
+
     }
 
     fun goToSettings(view: View){

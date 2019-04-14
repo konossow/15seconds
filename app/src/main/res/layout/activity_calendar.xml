@@ -30,6 +30,7 @@
             android:scrollbarStyle="outsideOverlay"
             android:clipToPadding="false"
             android:background="#FFFFFF"
+            android:clickable="false"
             android:layout_alignParentTop="true"
             app:layout_constraintTop_toBottomOf="@+id/calendarToolbar"/>
 </android.support.constraint.ConstraintLayout>

@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ExercisesActivity" android:background="@color/backgroundColor">
+        tools:context=".ExercisesActivity">
     <TextView
             android:text="Standing"
             android:layout_width="match_parent"
@@ -21,27 +21,31 @@
             app:layout_constraintTop_toBottomOf="@+id/exercise_standingTextView">
         <TableLayout
                 android:layout_width="wrap_content"
+                android:background="#FFFFFF"
                 android:layout_height="match_parent" android:id="@+id/exercise_standingTableLayout">
 
             <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
-                      android:id="@+id/exercise_standing_buttonTableRow">
+                      android:id="@+id/exercise_standing_buttonTableRow"
+                      android:background="#FFFFFF" >
                 <ImageButton
                         android:src="@drawable/squats"
                         android:layout_width="150dp"
                         android:layout_height="225dp" android:id="@+id/exercise_squatsButton"
                         android:layout_weight="1"
-                        android:clickable="false" android:scaleType="fitCenter"/>
+                        android:onClick="goToSquats" android:scaleType="fitCenter"/>
                 <ImageButton
                         android:src="@drawable/jjacks"
                         android:layout_width="150dp"
                         android:layout_height="225dp" tools:layout_editor_absoluteY="0dp"
-                        tools:layout_editor_absoluteX="224dp" android:id="@+id/exercise_jjacksButton"
+                        tools:layout_editor_absoluteX="224dp"
+                        android:onClick="goToJJacks" android:id="@+id/exercise_jjacksButton"
                         android:scaleType="fitCenter"/>
                 <ImageButton
                         android:src="@drawable/jumpingrope"
                         android:layout_width="150dp"
                         android:layout_height="225dp" tools:layout_editor_absoluteY="0dp"
-                        tools:layout_editor_absoluteX="112dp" android:id="@+id/exercise_jropeButton"
+                        tools:layout_editor_absoluteX="112dp"
+                        android:onClick="goToJRope" android:id="@+id/exercise_jropeButton"
                         android:scaleType="fitCenter"/>
             </TableRow>
             <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
@@ -86,23 +90,27 @@
                         android:src="@drawable/superman"
                         android:layout_width="225dp"
                         android:layout_height="150dp" android:id="@+id/exercise_supermanButton"
-                        android:layout_weight="1" android:scaleType="fitCenter"/>
+                        android:layout_weight="1"
+                        android:onClick="goToSuperman" android:scaleType="fitCenter"/>
                 <ImageButton
                         android:src="@drawable/situp"
                         android:layout_width="225dp"
-                        android:layout_height="150dp" android:id="@+id/exercise_situpButton"
+                        android:layout_height="150dp"
+                        android:onClick="goToSitup" android:id="@+id/exercise_situpButton"
                         android:layout_weight="1" android:scaleType="fitCenter"/>
                 <ImageButton
                         android:src="@drawable/plank"
                         android:layout_width="225dp"
                         android:layout_height="150dp" tools:layout_editor_absoluteY="441dp"
-                        tools:layout_editor_absoluteX="102dp" android:id="@+id/exercise_plankButton"
+                        tools:layout_editor_absoluteX="102dp"
+                        android:onClick="goToPlank" android:id="@+id/exercise_plankButton"
                         android:scaleType="fitCenter"/>
                 <ImageButton
                         android:src="@drawable/pushups"
                         android:layout_width="225dp"
                         android:layout_height="150dp" android:id="@+id/exercise_pushupsButton"
-                        android:layout_weight="1" android:scaleType="fitCenter"/>
+                        android:layout_weight="1"
+                        android:onClick="goToPushup" android:scaleType="fitCenter"/>
             </TableRow>
             <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
                       android:id="@+id/excercise_lying_checkboxTableRow">
@@ -128,7 +136,7 @@
     <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/colorPrimary"
+            android:background="?attr/colorPrimary"
             android:theme="?attr/actionBarTheme"
             android:minHeight="?attr/actionBarSize"
             android:id="@+id/exercisesToolbar" app:layout_constraintEnd_toEndOf="parent"

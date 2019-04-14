@@ -7,7 +7,7 @@ import kotlin.collections.ArrayList
 object SettingsSingleton {
     private var dayAvailableFrom: Int? = null
     private var dayAvailableTo: Int? = null
-    private var succededDates: ArrayList<Date> = arrayOf(Date(119,3,10), Date(119,3,11),Date()).toCollection(ArrayList())
+    private var succededDates: ArrayList<Date> = arrayOf(Date(119,3,10), Date(119,3,11)).toCollection(ArrayList())
     private var exerciseDuration: Int = 15
 
     fun getAvailableFrom():String{
@@ -51,10 +51,15 @@ object SettingsSingleton {
         return this.exerciseDuration.toString() + " seconds"
     }
 
+    fun getExerciseDurationInt(): Int{
+        return this.exerciseDuration
+    }
+
     fun setSuccededDates(dates: ArrayList<Date>){
-        this.succededDates.clear()
         dates.forEach {
-            this.succededDates.add(it)
+            if(this.succededDates.indexOf(it) == -1) {
+                this.succededDates.add(it)
+            }
         }
     }
 

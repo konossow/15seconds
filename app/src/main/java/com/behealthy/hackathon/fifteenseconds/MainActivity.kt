@@ -19,7 +19,6 @@ import android.support.v4.app.NotificationCompat
 import android.support.v4.app.NotificationManagerCompat
 
 
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,15 +28,6 @@ class MainActivity : AppCompatActivity() {
             getSupportActionBar()?.setLogo(R.drawable.icon)
             getSupportActionBar()?.setDisplayUseLogoEnabled(true)
         textView.text = getString(R.string.welcome_messege_0)
-        showoffButton.setOnClickListener()
-        {
-            val showoffIntent = Intent()
-            showoffIntent.action = Intent.ACTION_SEND
-            showoffIntent.putExtra(Intent.EXTRA_TEXT, "I rock with 15sec app!")
-            showoffIntent.type = "text/plain"
-            startActivity(Intent.createChooser(showoffIntent, "Share to: "))
-        }
-
     }
 
     fun goToExercises(view: View){
@@ -50,12 +40,15 @@ class MainActivity : AppCompatActivity() {
         startActivity(calendarIntent)
     }
 
+    fun goToShowoff(view: View){
+        val showoffIntent = Intent(this, ShowoffActivity::class.java)
+        startActivity(showoffIntent)
+    }
+
     fun goToSettings(view: View){
         val settingsIntent = Intent(this, SettingsActivity::class.java)
         startActivity(settingsIntent)
     }
-
-
 
     fun testbtn(view: View){
 //        val notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
@@ -63,19 +56,19 @@ class MainActivity : AppCompatActivity() {
 //        r.play()
         val mp = MediaPlayer.create(this, R.raw.crab_rave)
        // val vib = Vibrator().vibrate()
-        val intent = Intent(this, ShowoffActivity::class.java)
+        val intent = Intent(this, ExerciseJJacksActivity::class.java)
         intent.putExtra("startWorkout", true)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP)
         val pIntent = PendingIntent.getActivity(this, 0, intent, 0)
-        //NotificationChannel()
         val channelID = "CHANNEL_ID"
         val notificationID = 1
         val notificationBuilder = NotificationCompat.Builder(this, channelID)
-            .setContentTitle("Notification Demo")
-            .setSmallIcon(R.drawable.ic_launcher_background)
+            .setContentTitle("Time to workout!")
+            .setSmallIcon(R.drawable.icon)
             .setContentIntent(pIntent)
-            .setContentText("You have got notification.")
-            .setSound(Uri.parse("android.resource://com.behealthy.hackathon.fifteenseconds/" + R.raw.crab_rave))
-            .setVibrate(longArrayOf(0, 15000))
+            .setContentText("Today's challange are JJacks!")
+            //.setSound(Uri.parse("android.resource://com.behealthy.hackathon.fifteenseconds/" + R.raw.crab_rave))
+            //.setVibrate(longArrayOf(0, 15000))
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = "Channel's name"
             val description = "Channel's description"
@@ -91,17 +84,5 @@ class MainActivity : AppCompatActivity() {
             val notificationManagerCompat = NotificationManagerCompat.from(this)
             notificationManagerCompat.notify(notificationID, notificationBuilder.build())
         }
-//        var builder = NotificationCompat.Builder(this, "channelId")
-//            .setSmallIcon(R.drawable.ic_launcher_background)
-//            .setContentTitle("Test")
-//            .setContentText("test")
-//            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-        //add sound
-        //val uri = RingtoneManager.getDefaultUri(RingtoneManager.);
-        //notificationBuilder
-        //vibrate
-        //notificationBuilder
-        //(getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager).notify(1, notificationBuilder.build())
-
     }
 }

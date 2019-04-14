@@ -13,7 +13,7 @@ class CalendarActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
         val calendar_view = findViewById<CalendarPickerView>(R.id.calendar_view)
-        calendar_view.init(Date(119,0,1), Date(1119,11,30))
+        calendar_view.init(Date(119,0,1), Date(129,11,30))
             .inMode(CalendarPickerView.SelectionMode.MULTIPLE)
         SettingsSingleton.getSuccededDates().forEach {
             calendar_view.selectDate(it)

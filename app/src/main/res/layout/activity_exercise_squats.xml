@@ -17,5 +17,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:logo="@drawable/ic_action_name" app:title="Squats"
             app:titleMarginStart="30dp" android:onClick="goBack"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/squats"
+            android:id="@+id/imageSquat" android:layout_marginTop="80dp"
+            app:layout_constraintTop_toTopOf="@+id/settingsToolbar" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.497"/>
+    <TextView
+            android:text="@string/exerciseSquatDescription"
+            android:layout_width="340dp"
+            android:layout_height="135dp"
+            android:id="@+id/exerciseSquat" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageSquat" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:textSize="12sp"/>
 
 </android.support.constraint.ConstraintLayout>

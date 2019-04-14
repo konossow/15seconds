@@ -17,5 +17,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:logo="@drawable/ic_action_name" app:title="Jumping Rope"
             app:titleMarginStart="30dp" android:onClick="goBack"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/jumpingrope"
+            android:id="@+id/imageJRope" android:layout_marginTop="80dp"
+            app:layout_constraintTop_toTopOf="@+id/settingsToolbar" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.497"/>
+    <TextView
+            android:text="@string/exerciseJRopeDescription"
+            android:layout_width="340dp"
+            android:layout_height="135dp"
+            android:id="@+id/exerciseJRope" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageJRope" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:textSize="14sp"/>
 
 </android.support.constraint.ConstraintLayout>

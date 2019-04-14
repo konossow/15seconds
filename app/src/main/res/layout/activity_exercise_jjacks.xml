@@ -27,11 +27,11 @@
             app:layout_constraintStart_toStartOf="parent" app:logo="@drawable/ic_action_name" app:title="Jumping Jacks"
             app:titleMarginStart="30dp" android:onClick="goBack"/>
     <TextView
-            android:layout_width="302dp"
-            android:layout_height="91dp"
-            android:id="@+id/textView2" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_width="340dp"
+            android:layout_height="135dp"
+            android:id="@+id/exerciseJJacks" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/gifImageView"
-            android:text="@string/exercisePushupDescription" android:textSize="18sp"/>
+            android:text="@string/exerciseJJacksDescription" android:textSize="12sp"/>
 
 </android.support.constraint.ConstraintLayout>

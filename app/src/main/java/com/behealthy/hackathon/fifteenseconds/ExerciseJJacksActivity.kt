@@ -13,14 +13,15 @@ import java.util.*
 
 class ExerciseJJacksActivity : AppCompatActivity() {
     var startWorkout:Boolean = false
+    val mp = MediaPlayer.create(this, R.raw.crab_rave60s)
+    val vb = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise_jjacks)
 
         this.startWorkout = intent.getBooleanExtra("startWorkout", false)
         if(this.startWorkout){
-            val mp = MediaPlayer.create(this, R.raw.crab_rave60s)
-            val vb = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
             mp.start()
             (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator).vibrate(SettingsSingleton.getExerciseDurationInt().toLong()*1000)
             timerTextView.visibility = View.VISIBLE
@@ -58,6 +59,8 @@ class ExerciseJJacksActivity : AppCompatActivity() {
 
     fun goBack(view: View)
     {
+        mp.stop()
+        vb.cancel()
         finish()
     }
 

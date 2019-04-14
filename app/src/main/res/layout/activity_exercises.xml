@@ -5,7 +5,126 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ExercisesActivity" android:onClick="goBack">
+        tools:context=".ExercisesActivity">
+    <TextView
+            android:text="Standing"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            tools:layout_editor_absoluteX="0dp" android:id="@+id/exercise_standingTextView"
+            app:layout_constraintTop_toBottomOf="@+id/exercisesToolbar" android:paddingLeft="30dp"
+            android:textSize="18sp" android:paddingTop="3dp"/>
+    <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exercise_standingScrollView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_standingTextView">
+        <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:id="@+id/exercise_standingTableLayout">
+
+            <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:id="@+id/exercise_standing_buttonTableRow">
+                <ImageButton
+                        android:src="@drawable/squats"
+                        android:layout_width="150dp"
+                        android:layout_height="225dp" android:id="@+id/exercise_squatsButton"
+                        android:layout_weight="1"
+                        android:clickable="false" android:scaleType="fitCenter"/>
+                <ImageButton
+                        android:src="@drawable/jjacks"
+                        android:layout_width="150dp"
+                        android:layout_height="225dp" tools:layout_editor_absoluteY="0dp"
+                        tools:layout_editor_absoluteX="224dp" android:id="@+id/exercise_jjacksButton"
+                        android:scaleType="fitCenter"/>
+                <ImageButton
+                        android:src="@drawable/jumpingrope"
+                        android:layout_width="150dp"
+                        android:layout_height="225dp" tools:layout_editor_absoluteY="0dp"
+                        tools:layout_editor_absoluteX="112dp" android:id="@+id/exercise_jropeButton"
+                        android:scaleType="fitCenter"/>
+            </TableRow>
+            <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:id="@+id/exercise_standing_checkboxTableRow">
+                <CheckBox
+                        android:text="Squats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/exercise_squatsCheckbox"
+                />
+                <CheckBox
+                        android:text="Jumping jacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/exercise_jjacksCheckbox"/>
+                <CheckBox
+                        android:text="Jumping rope"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/exercise_jropeCheckbox"/>
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+    <TextView
+            android:text="Lying"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/exercise_lyingViewText"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_standingScrollView"
+            app:layout_constraintStart_toStartOf="parent" android:paddingTop="3dp" android:paddingLeft="30dp"
+            android:textSize="18sp"/>
+    <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_lyingViewText"
+            android:id="@+id/exercise_lyingScrollView">
+        <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:id="@+id/exercise_lyingTableLayout">
+
+            <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:id="@+id/exercise_lying_buttonTableRow">
+                <ImageButton
+                        android:src="@drawable/superman"
+                        android:layout_width="225dp"
+                        android:layout_height="150dp" android:id="@+id/exercise_supermanButton"
+                        android:layout_weight="1" android:scaleType="fitCenter"/>
+                <ImageButton
+                        android:src="@drawable/situp"
+                        android:layout_width="225dp"
+                        android:layout_height="150dp" android:id="@+id/exercise_situpButton"
+                        android:layout_weight="1" android:scaleType="fitCenter"/>
+                <ImageButton
+                        android:src="@drawable/plank"
+                        android:layout_width="225dp"
+                        android:layout_height="150dp" tools:layout_editor_absoluteY="441dp"
+                        tools:layout_editor_absoluteX="102dp" android:id="@+id/exercise_plankButton"
+                        android:scaleType="fitCenter"/>
+                <ImageButton
+                        android:src="@drawable/pushups"
+                        android:layout_width="225dp"
+                        android:layout_height="150dp" android:id="@+id/exercise_pushupsButton"
+                        android:layout_weight="1" android:scaleType="fitCenter"/>
+            </TableRow>
+            <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:id="@+id/excercise_lying_checkboxTableRow">
+                <CheckBox
+                        android:text="Superman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/exercise_"/>
+                <CheckBox
+                        android:text="Sit-ups"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/exercise_situpsCheckbox"/>
+                <CheckBox
+                        android:text="Plank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/exercise_plankCheckbox"/>
+                <CheckBox
+                        android:text="Push ups"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/exercise_pushupsCheckbox"/>
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
     <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -22,4 +141,5 @@
             android:layout_height="50dp"
             android:id="@+id/exercisesToolbarImage" app:layout_constraintEnd_toEndOf="@+id/exercisesToolbar"
             app:layout_constraintTop_toTopOf="parent"/>
+
 </android.support.constraint.ConstraintLayout>

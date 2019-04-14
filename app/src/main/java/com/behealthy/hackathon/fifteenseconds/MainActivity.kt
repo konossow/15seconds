@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
             getSupportActionBar()?.setDisplayShowHomeEnabled(true)
-            getSupportActionBar()?.setLogo(R.mipmap.ic_launcher)
+            getSupportActionBar()?.setLogo(R.drawable.icon)
             getSupportActionBar()?.setDisplayUseLogoEnabled(true)
         textView.text = getString(R.string.welcome_messege_0)
     }

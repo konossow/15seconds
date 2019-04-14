@@ -13,17 +13,18 @@ import java.util.*
 
 class ExerciseJJacksActivity : AppCompatActivity() {
     var startWorkout:Boolean = false
-    val mp = MediaPlayer.create(this, R.raw.crab_rave60s)
-    val vb = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+    var mp :MediaPlayer? = null
+    var vb :Vibrator? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise_jjacks)
-
+        this.mp = MediaPlayer.create(this, R.raw.crab_rave60s)
+        this.vb = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         this.startWorkout = intent.getBooleanExtra("startWorkout", false)
         if(this.startWorkout){
-            mp.start()
-            (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator).vibrate(SettingsSingleton.getExerciseDurationInt().toLong()*1000)
+            mp!!.start()
+            vb!!.vibrate(SettingsSingleton.getExerciseDurationInt().toLong()*1000)
             timerTextView.visibility = View.VISIBLE
             var minutes = SettingsSingleton.getExerciseDurationInt()/60
             var seconds = SettingsSingleton.getExerciseDurationInt()%60
@@ -44,8 +45,8 @@ class ExerciseJJacksActivity : AppCompatActivity() {
                 }
 
                 override fun onFinish() {
-                    mp.stop()
-                    vb.cancel()
+                    mp!!.stop()
+                    vb!!.cancel()
                     saveButton.visibility = View.VISIBLE
                 }
             }
@@ -59,8 +60,8 @@ class ExerciseJJacksActivity : AppCompatActivity() {
 
     fun goBack(view: View)
     {
-        mp.stop()
-        vb.cancel()
+        mp!!.stop()
+        vb!!.cancel()
         finish()
     }
 

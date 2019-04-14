@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ExercisesActivity">
+        tools:context=".ExercisesActivity" android:background="@color/backgroundColor">
     <TextView
             android:text="Standing"
             android:layout_width="match_parent"
@@ -54,15 +54,17 @@
                         android:text="Squats"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:id="@+id/exercise_squatsCheckbox"
-                />
+                        android:checked="true"/>
                 <CheckBox
                         android:text="Jumping jacks"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/exercise_jjacksCheckbox"/>
+                        android:layout_height="wrap_content" android:id="@+id/exercise_jjacksCheckbox"
+                        android:checked="true"/>
                 <CheckBox
                         android:text="Jumping rope"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/exercise_jropeCheckbox"/>
+                        android:layout_height="wrap_content" android:id="@+id/exercise_jropeCheckbox"
+                        android:checked="true"/>
             </TableRow>
         </TableLayout>
     </HorizontalScrollView>
@@ -117,26 +119,29 @@
                 <CheckBox
                         android:text="Superman"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/exercise_"/>
+                        android:layout_height="wrap_content" android:id="@+id/exercise_" android:checked="true"/>
                 <CheckBox
                         android:text="Sit-ups"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/exercise_situpsCheckbox"/>
+                        android:layout_height="wrap_content" android:id="@+id/exercise_situpsCheckbox"
+                        android:checked="true"/>
                 <CheckBox
                         android:text="Plank"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/exercise_plankCheckbox"/>
+                        android:layout_height="wrap_content" android:id="@+id/exercise_plankCheckbox"
+                        android:checked="true"/>
                 <CheckBox
                         android:text="Push ups"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/exercise_pushupsCheckbox"/>
+                        android:layout_height="wrap_content" android:id="@+id/exercise_pushupsCheckbox"
+                        android:checked="true"/>
             </TableRow>
         </TableLayout>
     </HorizontalScrollView>
     <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorPrimary"
             android:theme="?attr/actionBarTheme"
             android:minHeight="?attr/actionBarSize"
             android:id="@+id/exercisesToolbar" app:layout_constraintEnd_toEndOf="parent"

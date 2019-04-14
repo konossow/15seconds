@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:background="@color/backgroundColor">
     <TextView
             android:text="@string/settingsButtonName"
             android:layout_width="150dp"
@@ -35,7 +35,7 @@
             android:textStyle="bold" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="40dp"
             app:layout_constraintStart_toStartOf="parent" android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp" android:onClick="testbtn"/>
     <Button
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -50,7 +50,7 @@
             android:id="@+id/showoffButton"
             app:layout_constraintTop_toBottomOf="@+id/exercisesButtonName"
             app:layout_constraintStart_toStartOf="@+id/exercisesButtonName" android:layout_marginTop="40dp"
-            android:onClick="goToShowoff" android:background="@drawable/face"/>
+            android:background="@drawable/face"/>
     <Button
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -73,16 +73,5 @@
             android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@+id/excersisesButton"
             app:layout_constraintStart_toStartOf="@+id/excersisesButton" android:text="@string/exercisesButtonName"/>
-    <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="156dp" android:id="@+id/button" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView" android:onClick="testbtn"/>
-    <ImageView
-            android:src="@drawable/test1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" tools:layout_editor_absoluteY="568dp"
-            tools:layout_editor_absoluteX="115dp" android:id="@+id/imageView4" android:scaleType="fitCenter"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -28,6 +28,15 @@ class MainActivity : AppCompatActivity() {
             getSupportActionBar()?.setLogo(R.drawable.icon)
             getSupportActionBar()?.setDisplayUseLogoEnabled(true)
         textView.text = getString(R.string.welcome_messege_0)
+        showoffButton.setOnClickListener()
+        {
+            val showoffIntent = Intent()
+            showoffIntent.action = Intent.ACTION_SEND
+            showoffIntent.putExtra(Intent.EXTRA_TEXT, "I rock with 15sec app!")
+            showoffIntent.type = "text/plain"
+            startActivity(Intent.createChooser(showoffIntent, "Share to: "))
+        }
+
     }
 
     fun goToExercises(view: View){
@@ -38,11 +47,6 @@ class MainActivity : AppCompatActivity() {
     fun goToCalendar(view: View){
         val calendarIntent = Intent(this, CalendarActivity::class.java)
         startActivity(calendarIntent)
-    }
-
-    fun goToShowoff(view: View){
-        val showoffIntent = Intent(this, ShowoffActivity::class.java)
-        startActivity(showoffIntent)
     }
 
     fun goToSettings(view: View){
